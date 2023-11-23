@@ -15,6 +15,14 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
+   "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm test",
+      "post-merge": "npm install"
+    },
+    "gitDir": "../.git"
+  },
   "dependencies": {
     "next": "14.0.3",
     "react": "^18",
